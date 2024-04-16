@@ -1,0 +1,20 @@
+footer {
+  background-color: #2d2e32;
+  font-family: sans-serif;
+}
+
+.footerWrapper{
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 1.2em;
+}
+
+
+.footerWrapper a{color: white; text-decoration: none;}
+
+.footerWrapper .socialLinks a img{width: 32px;}
+
+.socialLinks{ display: flex; gap: 2em; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', { metaData }); %>
+
+    <link rel="stylesheet" href="/assets/css/projectPage.css" />
+  </head>
+  <body>
+    <%- include('components/menu'); %>
+
+    <div class="container">
+      <h1>Projects</h1>
+      <div class="projectContainer">
+        <%- include('components/singleproject',{ title: `TradeBook`, liveUrl:
+        `https://mytradebook.vercel.app/account/login`, description: `Created an
+        intraday trading journal for Indians. So they can analyze their trades
+        with ease.`, frontendStack: `react,js,css,redux`, backendStack:
+        `express,mongodb` }); %>
+
+        <!-- Hey Birthday -->
+
+        <%- include('components/singleproject',{ title: `Hey Birthday `,
+        liveUrl: `https://hey-birthday.vercel.app`, description: `A birthday's
+        manager. Create birthdays and share lists. `, frontendStack:
+        `react,js,css,mui,tailwind`, backendStack: `express,mongodb` }); %>
+
+        <!-- quizzy -->
+        <%- include('components/singleproject',{ title: `Quiz Platform`,
+        liveUrl: `https://github.com/Amanp30/quiz-admin-frontend`, description:
+        `Create questions and take quiz. `, frontendStack: `react,js,css`,
+        backendStack: `express,mongodb` }); %>
+
+        <!-- Tesla Frontpage Clone -->
+        <%- include('components/singleproject',{ title: `Tesla`, liveUrl:
+        `https://teslafrontpage.vercel.app`, description: `Clone of tesla
+        website front page. `, frontendStack: `react,js,css`, backendStack:""});
+        %>
+
+        <!-- Medicare landing page -->
+        <%- include('components/singleproject',{ title: `Medicare Landing Page`,
+        liveUrl: `https://medicare-page.vercel.app`, description: `A hospital
+        landing page. `, frontendStack: `gatsby,js,css,` ,backendStack:""}); %>
+
+        <!-- Medicare landing page -->
+        <%- include('components/singleproject',{ title: `Investor.js (NPM
+        Package)`, liveUrl: `https://investorjs.vercel.app/docs`, description:
+        `This npm package is a comprehensive collection of financial formulas,
+        including metrics like PE ratio, PB ratio, and more. `, frontendStack:
+        `js,npm,` ,backendStack:""}); %>
+      </div>
+    </div>
+
+    <%- include('components/footer'); %>
+    <script src="/assets/menu/menu.js"></script>
+  </body>
+</html>

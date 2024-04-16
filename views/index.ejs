@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', { metaData }); %>
+    <link rel="stylesheet" href="/assets/css/homepage.css" />
+  </head>
+  <body>
+    <%- include('components/menu'); %>
+
+    <div class="homeHero">
+      <h1>Full Stack Developer</h1>
+      <p>
+        Hi, I'm Aman Pareek. A passionate Full Stack Developer based in Jaipur,
+        Rajasthan. 📍
+      </p>
+      <div class="HomeSocialLinks">
+        <a href="https://www.linkedin.com/in/aman-pareek/"
+          ><img src="/assets/imgs/linkedin.svg" alt="linkedin aman pareek"
+        /></a>
+        <a href="https://github.com/Amanp30"
+          ><img src="/assets/imgs/github.svg" alt="github amanp30"
+        /></a>
+      </div>
+
+      <div>
+        <h2>Tech Stack</h2>
+        <div class="stackContainer">
+          <img class="stackImg" src="https://skillicons.dev/icons?i=html,css" />
+          <img
+            class="stackImg"
+            src="https://skillicons.dev/icons?i=tailwind,js"
+          />
+          <img
+            class="stackImg"
+            src="https://skillicons.dev/icons?i=nodejs,express"
+          />
+          <img
+            class="stackImg"
+            src="https://skillicons.dev/icons?i=mongodb,react"
+          />
+          <img
+            class="stackImg"
+            src="https://skillicons.dev/icons?i=nextjs,redux"
+          />
+          <img
+            class="stackImg"
+            src="https://skillicons.dev/icons?i=github,webpack"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="homeProject">
+      <p>
+        I have built projects like <strong>Tradebook</strong>, BP Logger,
+        Investor.js
+      </p>
+
+      <a href="/projects">Have a look</a>
+    </div>
+
+    <%- include('components/footer'); %>
+    <script src="/assets/menu/menu.js"></script>
+  </body>
+</html>

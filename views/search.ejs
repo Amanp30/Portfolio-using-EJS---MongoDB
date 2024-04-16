@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', {metaData}); %>
+
+    <link rel="stylesheet" href="/assets/css/blogorsearch.css" />
+  </head>
+  <body>
+    <%- include('components/menu'); %>
+
+    <div class="container">
+      <h1>Searched query - <%= searchTerm %></h1>
+      <%- include('components/article-map', { data: articles }) %>
+    </div>
+
+    <!-- Footer -->
+    <%- include('components/footer'); %>
+    <script src="/assets/menu/menu.js"></script>
+  </body>
+</html>

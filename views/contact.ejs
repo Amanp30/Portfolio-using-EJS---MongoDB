@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', {metaData}); %>
+
+    <link rel="stylesheet" href="/assets/css/contact.css" />
+  </head>
+  <body>
+    <%- include('components/menu'); %>
+
+    <div class="contactContainer">
+      <h1>Contact me</h1>
+      <form id="form">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" />
+        <label for="email">Email Address</label>
+        <input type="email" name="email" />
+        <label for="message">Message</label>
+        <textarea name="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div id="showMessage"></div>
+    </div>
+
+    <%- include('components/footer'); %>
+
+    <script src="/assets/menu/menu.js"></script>
+    <script src="/assets/js/form.js"></script>
+  </body>
+</html>

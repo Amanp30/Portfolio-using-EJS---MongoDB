@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', {metaData}); %>
+
+    <link rel="stylesheet" href="/assets/css/blogorsearch.css" />
+
+    <title>Articles</title>
+  </head>
+  <body>
+    <%- include('components/menu'); %>
+
+    <div class="container">
+      <h1>Articles</h1>
+      <%- include('components/article-map', { data }) %>
+    </div>
+
+    <%- include('components/footer'); %>
+    <script src="/assets/menu/menu.js"></script>
+  </body>
+</html>

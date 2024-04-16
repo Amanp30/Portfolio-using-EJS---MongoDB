@@ -1,0 +1,12 @@
+<ul>
+  <% data.forEach(item => { %>
+  <li>
+    <a href="/article/<%= item.slug %>"><%= item.title %></a>
+    <% if (item.isUpdated) { %>
+    <p>Updated at <%= item.formatted_updated %></p>
+    <% } else { %>
+    <p><%= item.formatted_published %></p>
+    <% } %>
+  </li>
+  <% }); %>
+</ul>

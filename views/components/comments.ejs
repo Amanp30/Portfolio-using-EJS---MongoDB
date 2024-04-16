@@ -1,0 +1,34 @@
+<% if (comments.length > 0) { %>
+<ul class="commentsContainer">
+  <% comments.forEach(renderComment); %>
+</ul>
+<% } else { %>
+<div class="no-comments">
+  <img src="/assets/imgs/comments.svg" alt="No comments" />
+  <p>Be the first to comment!</p>
+  <a href="<%= data.url %>">Comment on dev.to</a>
+</div>
+<% } %>
+
+<!-- render comment function -->
+<% function renderComment(comment) { %>
+<li class="comment">
+  <div class="single-comment">
+    <img
+      class="user-avatar"
+      src="<%= comment.user.profile_image_90 %>"
+      alt="User Avatar"
+    />
+    <div>
+      <p><%= comment.user.name %></p>
+      <div class="comment-body"><%- comment.body_html %></div>
+    </div>
+    <a href="<%= data.url %>" class="replyUrl">Reply on Dev.to</a>
+  </div>
+  <% if (comment.children && comment.children.length > 0) { %>
+  <ul class="nested-comments">
+    <% comment.children.forEach(renderComment); %>
+  </ul>
+  <% } %>
+</li>
+<% } %>

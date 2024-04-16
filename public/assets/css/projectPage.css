@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.container h1 {
+  color: #333;
+  text-align: center;
+}
+
+.container ol li,
+.container ul li,
+.container p {
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+
+.projectContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4em;
+  row-gap: 6em;
+}
+
+.singleProject .title {
+  color: blue;
+  text-decoration: none;
+}
+
+.singleProject .title h2 {
+  margin: 0px;
+}
+
+.singleProject .description {
+  margin-top: 0.6em;
+}
+
+.singleProject img {
+  aspect-ratio: 16 / 9; /* Adjust the aspect ratio as per your images */
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('components/headlink', {metaData}); %>
+
+    <link rel="stylesheet" href="/assets/css/articlePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Include your menu -->
+    <%- include('components/menu'); %>
+    <div class="container">
+      <h1><%= data.title %></h1>
+      <div class="belowHeaderInfo">
+        <p>
+          Posted By <%= data.user.name %> at <%= data.formatted_published %>
+        </p>
+
+        <p class="timing">
+          <img src="/assets/imgs/time.svg" /> <%- data.reading_time_minutes %>
+          min
+        </p>
+      </div>
+      <div class="article-body"><%- data.body_html %></div>
+
+      <h2>Comments</h2>
+      <%- include('components/comments', { comments }) %>
+    </div>
+
+    <!-- Include your footer -->
+    <%- include('components/footer'); %>
+
+    <!-- Include your menu scripts -->
+    <script src="/assets/menu/menu.js"></script>
+  </body>
+</html>
