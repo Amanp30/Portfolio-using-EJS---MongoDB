@@ -46,3 +46,10 @@ body {
 .singleProject img {
   aspect-ratio: 16 / 9; /* Adjust the aspect ratio as per your images */
 }
+
+@media (max-width: 646px) {
+  .projectContainer {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+}
